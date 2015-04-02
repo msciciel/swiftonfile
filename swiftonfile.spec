@@ -24,11 +24,11 @@ Requires : memcached
 Requires : openssl
 Requires : python
 Requires : python-prettytable
-Requires : openstack-swift = 1.13.1
-Requires : openstack-swift-account = 1.13.1
-Requires : openstack-swift-container = 1.13.1
-Requires : openstack-swift-object = 1.13.1
-Requires : openstack-swift-proxy = 1.13.1
+Requires : openstack-swift >= 2.2.0
+Requires : openstack-swift-account >= 2.2.0
+Requires : openstack-swift-container >= 2.2.0
+Requires : openstack-swift-object >= 2.2.0
+Requires : openstack-swift-proxy >= 2.2.0
 Requires : glusterfs-api >= 3.4.1
 Obsoletes: glusterfs-swift-plugin
 Obsoletes: glusterfs-swift
@@ -85,6 +85,9 @@ done
 %config(noreplace) %{_confdir}/object-expirer.conf-gluster
 
 %changelog
+* Thu Apr 4 2015 Krzysztof Pawlowski <msciciel@msciciel.eu> 2.2.1
+- Juno/Kilo Release
+
 * Mon Oct 28 2013 Luis Pabon <lpabon@redhat.com> - 1.10.1-0
 - IceHouse Release
 
