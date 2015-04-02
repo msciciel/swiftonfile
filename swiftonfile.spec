@@ -69,13 +69,9 @@ cp -r etc/*   %{buildroot}/%{_confdir}/
 %{_bindir}/swiftonfile-print-metadata
 
 %dir %{_confdir}
-%config(noreplace) %{_confdir}/account-server.conf-gluster
-%config(noreplace) %{_confdir}/container-server.conf-gluster
-%config(noreplace) %{_confdir}/object-server.conf-gluster
-%config(noreplace) %{_confdir}/swift.conf-gluster
-%config(noreplace) %{_confdir}/proxy-server.conf-gluster
-%config(noreplace) %{_confdir}/fs.conf-gluster
-%config(noreplace) %{_confdir}/object-expirer.conf-gluster
+%config(noreplace) %{_confdir}/object-server.conf-swiftonfile
+%config(noreplace) %{_confdir}/swift.conf-swiftonfile
+%config(noreplace) %{_confdir}/fs.conf-swiftonfile
 
 %changelog
 * Thu Apr 4 2015 Krzysztof Pawlowski <msciciel@msciciel.eu> 2.2.1
