@@ -59,12 +59,6 @@ rm -rf %{buildroot}
 mkdir -p      %{buildroot}/%{_confdir}/
 cp -r etc/*   %{buildroot}/%{_confdir}/
 
-# Man Pages
-install -d -m 755 %{buildroot}%{_mandir}/man8
-for page in doc/man/*.8; do
-    install -p -m 0644 $page %{buildroot}%{_mandir}/man8
-done
-
 # Remove tests
 %{__rm} -rf %{buildroot}/%{python_sitelib}/test
 
@@ -73,7 +67,6 @@ done
 %{python_sitelib}/swiftonfile
 %{python_sitelib}/swiftonfile-%{_version}_*.egg-info
 %{_bindir}/swiftonfile-print-metadata
-%{_mandir}/man8/*
 
 %dir %{_confdir}
 %config(noreplace) %{_confdir}/account-server.conf-gluster
